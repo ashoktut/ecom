@@ -1,0 +1,7 @@
+<div class="borderBottom" *ngIf="promoImages.length > 0">
+    <ion-slides pager="true" autoplay="2000" loop="true" [options]="slideOptions">
+      <ion-slide *ngFor='let promo of promoImages'>
+        <div [ngStyle]="{'background-image':'url(' + promo.special + ')'}"></div>
+      </ion-slide>
+    </ion-slides>
+  </div>
