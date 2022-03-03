@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <span>Home</span>
+      <ion-icon name="chevron-douwn-outline" color="dark"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Specials section -->
+    <app-specials [promoImages]="specials"></app-specials>
+
+  <!-- Categories grid section -->
+  <ion-grid>
+    <ion-row>
+      <app-categories
+        *ngFor="let category of categories"
+        [category]= "category"
+        [routerLink]="['/', 'tabs', 'categories', category.catId]">
+      </app-categories>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
