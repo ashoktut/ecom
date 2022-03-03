@@ -9,143 +9,17 @@
 
 <ion-content>
   <!-- Specials section -->
-    <!-- <ion-card>
-      <ion-slides pager="true" autoplay="2000" loop="true">
-        <ion-slide>
-          <img src="../../../../assets/images/specials/specials1.jpg" alt="specials">
-        </ion-slide>
-        <ion-slide>
-          <img src="../../../../assets/images/specials/specials2.jpg" alt="specials">
-        </ion-slide>
-        <ion-slide>
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-        </ion-slide>
-      </ion-slides>
-    </ion-card> -->
     <app-specials [promoImages]="specials"></app-specials>
 
   <!-- Categories grid section -->
-  <!-- <ion-grid>
+  <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Chicken</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Beef</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Burgers</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
+      <app-categories
+        *ngFor="let category of categories"
+        [category]= "category"
+        [routerLink]="['/', 'tabs', 'categories', category.catId]">
+      </app-categories>
     </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Combos</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Sides</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Drinks</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Dessert</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Snacks</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col>
-        <ion-card href="/tabs/items">
-          <img src="../../../../assets/images/specials/specials3.jpg" alt="specials">
-          <ion-card-content>
-            <ion-card-title>
-              <ion-label>Fruits</ion-label>
-            </ion-card-title>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-</ion-grid> -->
-
-<ion-grid>
-  <ion-row>
-    <app-categories
-    *ngFor="let category of categories"
-    [category]= "category"
-    [routerLink]="['/', 'tabs', 'categories', category.catId]">
-  </app-categories>
-  </ion-row>
-</ion-grid>
-
-  <!-- <app-categories
-    *ngFor="let category of categories"
-    [category]= "category"
-    [routerLink]="['/', 'tabs', 'categories', category.catId]">
-  </app-categories> -->
+  </ion-grid>
 
 </ion-content>
